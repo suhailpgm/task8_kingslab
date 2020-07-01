@@ -1,0 +1,63 @@
+
+<html>
+   <head>
+      <title>Angular JS Table</title>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   </head>
+   
+   <body>
+   
+      <div ng-app = "mainApp" ng-controller = "studentController">
+         
+         
+                  <table class="table table-striped">
+                    
+                     <tr ng-repeat = "subject in student">
+                     <td>{{ subject.id }}</td>
+                        <td>{{ subject.name }}</td>
+                        <td>{{ subject.gender }}</td>
+                        <td>{{ subject.salary }}</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         
+      </div>
+      
+      <script>
+         var mainApp = angular.module("mainApp", []);
+         
+         mainApp.controller('studentController', function($scope) {
+            $scope.student = [{    
+   "id":1,    
+   "name":"Employee A",    
+   "gender":"Male",    
+   "salary":10000    
+ },{    
+   "id":2,    
+   "name":"Employee A",    
+   "gender":"Female",    
+   "salary":20000    
+ },{    
+   "id":3,    
+   "name":"Employee C",    
+   "gender":"Male",    
+   "salary":30000    
+ },{    
+   "id":4,    
+   "name":"Employee D",    
+   "gender":"Female",    
+   "salary":40000    
+ },{    
+   "id":5,    
+   "name":"Employee E",    
+   "gender":"Male",    
+   "salary":50000    
+ }] ;
+         });
+      </script>
+      
+   </body>
+</html>
